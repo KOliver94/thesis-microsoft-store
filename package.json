@@ -1,0 +1,24 @@
+{
+  "name": "thesis-microsoft-store",
+  "version": "1.0.0",
+  "description": "Microsoft Store scraper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KOliver94/thesis-microsoft-store.git"
+  },
+  "author": "Olivér Kecskeméty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KOliver94/thesis-microsoft-store/issues"
+  },
+  "homepage": "https://github.com/KOliver94/thesis-microsoft-store#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "mongodb": "^3.0.8",
+    "request": "^2.85.0"
+  }
+}
