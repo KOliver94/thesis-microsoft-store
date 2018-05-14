@@ -6,7 +6,7 @@ var url = "mongodb://localhost:27017/";
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
 const MICROSOFT_URL = "https://www.microsoft.com";
-const CATEGORY = "most-popular"
+const CATEGORY = "most-popular";
 
 var options = {
     proxy: 'http://127.0.0.1:8080',
@@ -50,17 +50,12 @@ function details(error, response, body) {
             }
         });
 
-        var detail = {name: name, developer: developer}
-        var object = {detail: detail, permission: permissions}
+        var detail = {name: name, developer: developer};
+        var object = {detail: detail, permission: permissions};
 
         saveToDatabase(object);
-
-        // console.log('App name: ', name);
-        // console.log('Developer: ', developer);
-        // console.log('Permissions: ', permissions);
-
     }
-}
+};
 
 function list(error, response, body) {
     if(!error){
@@ -79,7 +74,7 @@ function list(error, response, body) {
         request(options,details);
     })
 
-}
+};
 
 
 function saveToDatabase(object){
@@ -92,9 +87,9 @@ function saveToDatabase(object){
             db.close();
         });
     });
-}
+};
 
 for(var i = 0; i <= 990; i+=90 ){
     options.url=MICROSOFT_URL+"/en-us/store/most-popular/apps/pc?s=store&skipitems="+i;
     request(options,list);
-}
+};
